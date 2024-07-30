@@ -6,3 +6,16 @@
   background-image: linear-gradient(rgb(62, 125, 255,.3) 0%, rgba(62, 125, 255, 0) 100%);
 }
 
+nav.navigation ul.list li:hover{
+  color: #3e7dff;
+  transition:color .2s;
+}
+.Sign-btn:hover{
+  background-color: #3e7dff;
+  border-color: #3e7dff;
+  color: white;
+  transition: all .2s;
+}
+.font-wight{
+  font-weight: 550;
+}
