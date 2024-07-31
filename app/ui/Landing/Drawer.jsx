@@ -1,7 +1,7 @@
 
 "use client";
 
-import { Button, Drawer } from "flowbite-react";
+import {Drawer } from "flowbite-react";
 
 export function DrawerComponent({isOpen,setIsOpen,handleClose}) {
     

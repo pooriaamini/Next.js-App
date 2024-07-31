@@ -5,8 +5,7 @@
 .background{
   background-image: linear-gradient(rgb(62, 125, 255,.3) 0%, rgba(62, 125, 255, 0) 100%);
 }
-
-nav.navigation ul.list li:hover{
+nav.navigation ul.list a:hover{
   color: #3e7dff;
   transition:color .2s;
 }
@@ -16,6 +15,14 @@ nav.navigation ul.list li:hover{
   color: white;
   transition: all .2s;
 }
-.font-wight{
+.font-middle{
   font-weight: 550;
+}
+
+.icon button{
+
+  background-color: white;
+  padding: .35rem;
+  border-radius: 999px;
+
 }

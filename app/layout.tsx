@@ -1,11 +1,10 @@
 // import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeModeScript } from "flowbite-react";
 
 
 
-import Header from "./ui/Header";
+import Header from "./ui/Landing/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,13 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <ThemeModeScript />
-      </head>
-      <body  className={`background relative min-h-[100vh] ${inter.className}`}>
+      
+      <body  className={`background relative min-h-[200vh] ${inter.className}`}>
         <Header />
        {children}
       </body>
     </html>
   );
 }
+

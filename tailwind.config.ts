@@ -13,6 +13,8 @@ const config: Config = {
 
   ],
 
+  darkMode: 'class',
+
   plugins: [
     flowbite.plugin(),
 
