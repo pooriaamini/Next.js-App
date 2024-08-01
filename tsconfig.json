@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ui/Landing/Drawer.jsx", "app/ui/Landing/Header.tsx", "app/ui/Landing/SearchModal.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Drawer.jsx", "app/components/N.tsx", "app/components/SearchModal.jsx"],
   "exclude": ["node_modules"]
 }

@@ -1,10 +1,8 @@
 // import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-
-
-import Header from "./ui/Landing/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      
-      <body  className={`background relative min-h-[200vh] ${inter.className}`}>
-        <Header />
-       {children}
+    <html className="scroll-smooth" lang="en">
+      <body className={`${inter.className}`}>
+        {children}
+        <SpeedInsights />
       </body>
     </html>
   );
 }
-

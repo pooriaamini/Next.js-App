@@ -12,11 +12,13 @@ import { useState, useEffect } from "react";
 import { DrawerComponent } from "./Drawer";
 import { SearchModal } from "./SearchModal";
 
-export default function Header() {
+export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
 
 
   // dark moode toggle
@@ -43,26 +45,45 @@ export default function Header() {
   const handleClose = () => setIsOpen(false);
 
 
+// // sticky navbar
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (window.scrollY > 50) {
+//         setIsSticky(true);
+//       } else {
+//         setIsSticky(false);
+//       }
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+
   return (
-    <nav className="navigation  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4    ">
-      <Image src={logo} width={150} height={150} alt="header logo" />
+    <nav className={`navigation  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4    `}>
+
+      <Link href=''>
+        <Image src={logo} width={150} height={150} alt="header logo" />
+      </Link>
 
       <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] ">
-        <li className="item">
-          <Link href="">Home</Link>
-        </li>
-        <li>
-          <Link href="">Features</Link>
-        </li>
-        <li>
+        
+          <Link href="/#home">Home</Link>
+        
+          <Link href="/#features">Features</Link>
+        
           <Link href="">Roadmap</Link>
-        </li>
 
-        <li  onMouseEnter={handleHover} className="relative">
+        <div  onMouseEnter={handleHover} className="relative">
+
           <div className="page flex    ">
             <Link href="">Pages</Link>
             <Image className="" src={dropdown} alt="dropicon" />
           </div>
+
           <div
             onMouseLeave={HandleUnHover}
             className={`${
@@ -75,12 +96,12 @@ export default function Header() {
             <Link href=''>Signin Page</Link>
             <Link href=''>Signup Page</Link>
           </div>
-        </li>
-
-        <li>
+          
+          </div>
+        
           <Link href="">Support</Link>
-        </li>
       </ul>
+
 
       <div className="flex justify-normal items-center gap-4">
         <button onClick={() => setOpenModal(true)} className="bg-white p-2 hidden md:block  rounded-full ">
@@ -104,9 +125,8 @@ export default function Header() {
             <Image className=" " src={dark} alt="dark" />
           </button>
         </div>
-        <div className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] border-[#637381] rounded-full ">
-          Sign In
-        </div>
+      <Link href='' className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] border-[#637381] rounded-full ">
+      Sign In</Link>
         <Image
           onClick={() => setIsOpen(true)}
           width={35}

@@ -5,8 +5,24 @@
 .background{
   background-image: linear-gradient(rgb(62, 125, 255,.3) 0%, rgba(62, 125, 255, 0) 100%);
 }
+
+nav.navigation{
+  position: relative;
+  transition: all .5s; 
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+
+}
 nav.navigation ul.list a:hover{
-  color: #3e7dff;
+  color: hsl(220, 100%, 62%);
   transition:color .2s;
 }
 .Sign-btn:hover{
@@ -15,6 +31,7 @@ nav.navigation ul.list a:hover{
   color: white;
   transition: all .2s;
 }
+
 .font-middle{
   font-weight: 550;
 }
@@ -25,4 +42,9 @@ nav.navigation ul.list a:hover{
   padding: .35rem;
   border-radius: 999px;
 
+}
+
+.xl-grid
+{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }

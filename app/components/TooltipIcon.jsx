@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { ReusableTooltip } from "../ReusableTooltip";
-import bitcoin from "../../../public/bitcoin.svg";
-import bitcoin1 from "../../../public/bitcoin1.svg";
-import bitcoin2 from "../../../public/bitcoin2.svg";
-import bitcoin3 from "../../../public/bitcoin3.svg";
-import bitcoin4 from "../../../public/bitcoin4.svg";
-import bitcoin5 from "../../../public/bitcoin5.svg";
+import { ReusableTooltip } from "./ReusableTooltip";
+import bitcoin from "@/public/bitcoin.svg";
+import bitcoin1 from "@/public/bitcoin1.svg";
+import bitcoin2 from "@/public/bitcoin2.svg";
+import bitcoin3 from "@/public/bitcoin3.svg";
+import bitcoin4 from "@/public/bitcoin4.svg";
+import bitcoin5 from "@/public/bitcoin5.svg";
 
 export default function TooltipIcon() {
   return (
