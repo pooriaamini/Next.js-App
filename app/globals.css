@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .background{
-  background-image: linear-gradient(rgb(62, 125, 255,.3) 0%, rgba(62, 125, 255, 0) 100%);
+  background-image: linear-gradient(rgb(62, 125, 255,.2) 0%, rgba(62, 125, 255, 0) 100%);
 }
 
 nav.navigation{
@@ -43,4 +43,5 @@ nav.navigation ul.list a:hover{
   border-radius: 999px;
 
 }
+
 

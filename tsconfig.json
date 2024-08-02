@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Drawer.jsx", "app/components/N.tsx", "app/components/SearchModal.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Drawer.jsx", "app/components/N.tsx", "app/components/SearchModal.jsx", "app/components/Navbar.jsx", "app/components/HomeSection.jsx"],
   "exclude": ["node_modules"]
 }

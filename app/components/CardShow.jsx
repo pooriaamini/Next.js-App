@@ -6,8 +6,8 @@ function CardShow({ item }) {
       <div className="bg-[#3e7dff] p-4 rounded-full">
           <Image className="" src={item.img} alt={item.subject} />
       </div>
-      <p className="font-bold text-[1.2rem] xl:text-[1.5rem] "> {item.subject}</p>
-      <p className="text-[#637381] text-[1rem]">{item.text}</p>
+      <p className="font-bold text-[1.2rem] xl:text-[1.5rem] dark:text-white "> {item.subject}</p>
+      <p className="text-[#637381] dark:text-[#b5b3bc] text-[1rem]">{item.text}</p>
     </div>
   );
 }

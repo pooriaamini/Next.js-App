@@ -20,7 +20,18 @@ const config: Config = {
 
 ]
  ,
- theme:{}
+ theme: {
+  extend: {
+    backgroundColor: {
+      'light-mode': '#ffffff',
+      'dark-mode': ' #080321',
+    },
+    textColor: {
+      'light-mode': '#000000',
+      'dark-mode': '#ffffff',
+    },
+  },
+},
 };
 
 export default config;

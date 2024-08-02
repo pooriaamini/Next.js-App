@@ -41,7 +41,7 @@ const cardItem = [
 
 export default function cardItems() {
   return (
-    <div className="w-[100%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-8 mt-5   " >
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-8 mt-5   " >
       {cardItem.map((item, index) => {
         return <CardShow item={item} key={index} />;
       })}
