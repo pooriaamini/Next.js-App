@@ -17,9 +17,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [openModal, setOpenModal] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-
-
 
   // dark moode toggle
   useEffect(() => {
@@ -34,7 +31,6 @@ export default function Navbar() {
 
   const handleHover = () => {
     setIsHover(true);
-    
   };
 
   const HandleUnHover = () => {
@@ -44,41 +40,22 @@ export default function Navbar() {
   // drawer toogle
   const handleClose = () => setIsOpen(false);
 
-
-// // sticky navbar
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       if (window.scrollY > 50) {
-//         setIsSticky(true);
-//       } else {
-//         setIsSticky(false);
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
-
-
   return (
-    <nav className={`navigation  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4    `}>
-
-      <Link href=''>
+    <nav
+      className={`navigation  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4    `}
+    >
+      <Link href="">
         <Image src={logo} width={150} height={150} alt="header logo" />
       </Link>
 
       <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] ">
-        
-          <Link href="/#home">Home</Link>
-        
-          <Link href="/#features">Features</Link>
-        
-          <Link href="">Roadmap</Link>
+        <Link href="/#home">Home</Link>
 
-        <div  onMouseEnter={handleHover} className="relative">
+        <Link href="/#features">Features</Link>
 
+        <Link href="">Roadmap</Link>
+
+        <div onMouseEnter={handleHover} className="relative">
           <div className="page flex    ">
             <Link href="">Pages</Link>
             <Image className="" src={dropdown} alt="dropicon" />
@@ -90,21 +67,22 @@ export default function Navbar() {
               isHover ? "flex flex-col gap-4" : "hidden"
             }         bg-white text-[1rem] text-black absolute rounded-2xl shadow-lg px-6 py-5 w-[15rem]  top-[3rem] left-[50%] translate-x-[-50%] z-10  `}
           >
-            <Link  href=''> Blog Grid Page</Link>
-            <Link href=''>Token Sale Page</Link>
-            <Link href=''>Support Page</Link>
-            <Link href=''>Signin Page</Link>
-            <Link href=''>Signup Page</Link>
+            <Link href=""> Blog Grid Page</Link>
+            <Link href="">Token Sale Page</Link>
+            <Link href="">Support Page</Link>
+            <Link href="">Signin Page</Link>
+            <Link href="">Signup Page</Link>
           </div>
-          
-          </div>
-        
-          <Link href="">Support</Link>
+        </div>
+
+        <Link href="">Support</Link>
       </ul>
 
-
       <div className="flex justify-normal items-center gap-4">
-        <button onClick={() => setOpenModal(true)} className="bg-white p-2 hidden md:block  rounded-full ">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="bg-white p-2 hidden md:block  rounded-full "
+        >
           <Image className="" src={search} alt="searchicon" />
         </button>
         <SearchModal openModal={openModal} setOpenModal={setOpenModal} />
@@ -115,7 +93,6 @@ export default function Navbar() {
             className="bg-[#3e7dff] rounded-full p-1"
           >
             <Image className="" src={light} alt="light" />
-
           </button>
 
           <button
@@ -125,8 +102,12 @@ export default function Navbar() {
             <Image className=" " src={dark} alt="dark" />
           </button>
         </div>
-      <Link href='' className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] border-[#637381] rounded-full ">
-      Sign In</Link>
+        <Link
+          href=""
+          className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] border-[#637381] rounded-full "
+        >
+          Sign In
+        </Link>
         <Image
           onClick={() => setIsOpen(true)}
           width={35}
@@ -136,6 +117,7 @@ export default function Navbar() {
           alt="toggle"
         />
       </div>
+
       <DrawerComponent
         handleClose={handleClose}
         isOpen={isOpen}
