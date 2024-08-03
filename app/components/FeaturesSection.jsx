@@ -1,7 +1,14 @@
 import CardItems from "./CardItems";
+import { motion } from "framer-motion";
 export default function FeaturesSection() {
   return (
-    <section
+    <motion.section initial={{opacity:0,y:20}}
+    whileInView={{opacity:1,y:0}}
+    viewport={{amount:.1,
+      once:true
+    }}
+    transition={{duration:.5,delay:.2}}
+
       id="features"
       className="features mt-[5rem] flex flex-col gap-4 items-center"
     >
@@ -18,7 +25,7 @@ export default function FeaturesSection() {
       </div>
 
       <CardItems />
-    </section>
+    </motion.section>
   );
 }
 

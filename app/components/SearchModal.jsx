@@ -1,29 +1,35 @@
 "use client";
+import close from '../../public/close.svg'
+import Image from 'next/image';
 
 import { Modal } from "flowbite-react";
 
-export function SearchModal({openModal,setOpenModal}) {
-
+export function SearchModal({ openModal, setOpenModal }) {
   return (
     <>
-      <Modal  dismissible show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header>Terms of Service</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
-              companies around the world are updating their terms of service agreements to comply.
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant
-              to ensure a common set of data rights in the European Union. It requires organizations to notify users as
-              soon as possible of high-risk data breaches that could personally affect them.
+      <Modal 
+        className="justify-center relative items-center "
+        dismissible
+        show={openModal}
+        onClose={() => setOpenModal(false)}
+      >
+       
+          <div>
+            <input
+              className="w-full p-4 border-x-0 border-t-0  py-6 dark:bg-slate-950 text-black dark:text-white  border-b-gray-500 round rounded-t-lg "
+              type="text"
+              placeholder="Search Entire Site | Products, Docs, Pages ..."
+            />
+          
+          </div>
+     
+        <Modal.Body className="dark:bg-slate-950">
+          <div className="space-y-6 min-h-[60vh]  flex justify-center">
+            <p className="text-base leading-relaxed text-[#b5bebc] dark:text-gray-400">
+              No items found...
             </p>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-         
-        </Modal.Footer>
       </Modal>
     </>
   );

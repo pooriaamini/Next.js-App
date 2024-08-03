@@ -11,12 +11,20 @@ import tailgridwhite from '../../public/TailGrids-white.svg'
 import lineiconwhite from '../../public/LineIcons-white.svg'
 import ayrouiwhite from '../../public/AyroUI-white.svg'
 import plainadminwhite from '../../public/PlainAdmin-white.svg'
+import { motion } from "framer-motion";
 
 
 
 export default function HomeSection({darkMode}) {
   return (
-    <section id="home" className="home  mt-[5rem] flex flex-col items-center gap-4 justify-center ">
+    <motion.section initial={{opacity:0 ,y:10}}
+    animate={  { opacity: 1 ,y:0}}
+    transition={{ duration: 0.3 }}
+    
+
+    
+    
+    id="home" className="home  mt-[5rem] flex flex-col items-center gap-4 justify-center ">
       <p className="text-[1.8rem] text-black dark:text-white w-[90%]  lg:w-[60vw] self-center   px-4 lg:px-0  lg:text-[2.25rem]  text-center font-bold">
         Next.js Template and Boilerplate for Crypto, ICO and Web3
       </p>
@@ -27,14 +35,14 @@ export default function HomeSection({darkMode}) {
         a comprehensive website or landing page for anything related to Crypto,
         Blockchain, and Web3.
       </p>
-      <div className="icon mt-4 self-center   flex justify-center gap-4">
+      <div className="icon mt-4 self-center   flex flex-wrap justify-center gap-4">
         <TooltipIcon />
       </div>
       <button className="bg-[#3e7dff]  py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">
         <Link href="">Buy Tokens 47% Off</Link>
       </button>
 
-      <p className="self-center mt-[4rem] text-[1.2rem] lg:text-[1.5rem]  text-black dark:text-white font-semibold ">
+      <p className=" text-center mt-[4rem] text-[1.2rem] lg:text-[1.5rem]  text-black dark:text-white font-semibold ">
         Join the 20,000+ companies using the our platform
       </p>
       <div className="  mt-[1.5rem]  flex flex-wrap justify-center items-center gap-[2.5rem]  ">
@@ -44,6 +52,6 @@ export default function HomeSection({darkMode}) {
         <Image width={150} alt="ayroui" src={darkMode? ayrouiwhite :ayroui} />
         <Image  width={160} alt="plainadmin" src={darkMode? plainadminwhite :plainadmin} />
       </div>
-    </section>
+    </motion.section>
   );
 }

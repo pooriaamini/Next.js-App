@@ -7,7 +7,7 @@ export function DrawerComponent({isOpen,setIsOpen,handleClose}) {
     
   return (
     <>
-      <Drawer position="right" open={isOpen} onClose={handleClose}>
+      <Drawer className=" drawer effect" position="right" open={isOpen} onClose={handleClose}>
         <Drawer.Header title="Drawer" />
         <Drawer.Items>
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
