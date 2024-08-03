@@ -24,7 +24,7 @@ export default function HomeSection({darkMode}) {
 
     
     
-    id="home" className="home  mt-[5rem] flex flex-col items-center gap-4 justify-center ">
+    id="home" className="home   mt-[5rem] flex flex-col items-center gap-4 justify-center ">
       <p className="text-[1.8rem] text-black dark:text-white w-[90%]  lg:w-[60vw] self-center   px-4 lg:px-0  lg:text-[2.25rem]  text-center font-bold">
         Next.js Template and Boilerplate for Crypto, ICO and Web3
       </p>

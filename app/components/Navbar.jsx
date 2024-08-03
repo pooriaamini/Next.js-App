@@ -18,8 +18,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const [isHover, setIsHover] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  
-    
+
   // dark moode toggle
   useEffect(() => {
     if (darkMode) {
@@ -43,7 +42,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <nav className="navigation relative  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4 z-50">
+    <nav
+      className='navigation  relative  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4 z-50'
+    >
       <Link href="">
         <Image
           src={darkMode ? logohidden : logo}
