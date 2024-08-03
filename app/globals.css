@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.background{
-  background-image: linear-gradient(rgb(62, 125, 255,.2) 0%, rgba(62, 125, 255, 0) 100%);
-  transition:  all  .2s;
-}
 
 @keyframes fade{
   from{
@@ -20,6 +16,14 @@
   animation: fade .5s;
 
 }
+
+.background{
+  background-image: linear-gradient(rgb(62, 125, 255,.2) 0%, rgba(62, 125, 255, 0) 100%);
+  transition:  all  .2s;
+  height: auto;
+}
+
+
 
 
 
@@ -49,7 +53,5 @@ nav.navigation ul.list a:hover{
   background-color: white;
   padding: .35rem;
   border-radius: 999px;
-
 }
-
 
