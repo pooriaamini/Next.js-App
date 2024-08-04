@@ -1,23 +1,24 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
-import logohidden from "@/public/logo-hidden.svg";
-import dropdown from "@/public/dropdown.svg";
-import search from "@/public/search.svg";
-import light from "@/public/light.svg";
-import dark from "@/public/dark.svg";
-import bar from "@/public/bar.svg";
-import barwhite from "@/public/barwhite.svg";
-import { useState, useEffect } from "react";
+import darkLogo from "@/public/logo-hidden.svg";
 import { DrawerComponent } from "./Drawer";
 import { SearchModal } from "./SearchModal";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoMoon } from "react-icons/io5";
+import { IoSunny } from "react-icons/io5";
+import { IoIosSearch } from "react-icons/io";
+import { FaBars } from "react-icons/fa6";
+import { useDark } from "../contexts/ModeContext";
 
-export default function Navbar({ darkMode, setDarkMode }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
+  const {darkMode,toggleDark,toggleLight}=useDark()
 
   // dark moode toggle
   useEffect(() => {
@@ -42,12 +43,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <nav
-      className='navigation  relative  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4 z-50'
-    >
+    <nav className="navigation  relative  flex items-center justify-between px-4 lg:px-0 lg:justify-around py-4 z-50">
       <Link href="">
         <Image
-          src={darkMode ? logohidden : logo}
+          src={darkMode ? darkLogo : logo}
           width={150}
           height={150}
           alt="header logo"
@@ -61,10 +60,18 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
         <Link href="">Roadmap</Link>
 
-        <div className="relative" onMouseEnter={handleHover}>
-          <div className="page flex    ">
+        <div
+          initial={{ rotate: 0 }}
+          className="relative"
+          onMouseEnter={handleHover}
+        >
+          <div className="page flex items-center    ">
             <Link href="">Pages</Link>
-            <Image className="" src={dropdown} alt="dropicon" />
+            <IoIosArrowDown
+              className={`${
+                isHover ? "rotate-180" : "rotate-0"
+              }  transition-all `}
+            />
           </div>
 
           <div
@@ -87,25 +94,25 @@ export default function Navbar({ darkMode, setDarkMode }) {
       <div className="flex justify-normal items-center gap-4">
         <button
           onClick={() => setOpenModal(true)}
-          className="bg-white   p-2 hidden md:block  rounded-full "
+          className="bg-white dark:bg-black   p-2 hidden md:block  rounded-full "
         >
-          <Image className="" src={search} alt="searchicon" />
+          <IoIosSearch className=" dark:text-white text-xl" />
         </button>
         <SearchModal openModal={openModal} setOpenModal={setOpenModal} />
 
         <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-2 rounded-full flex gap-1  items-center">
           <button
-            onClick={() => setDarkMode(false)}
+            onClick={toggleLight}
             className="dark:bg-white  bg-[#3e7dff] rounded-full p-1"
           >
-            <Image className="" src={light} alt="light" />
+            <IoSunny className="text-white dark:text-black" />
           </button>
 
           <button
-            onClick={() => setDarkMode(true)}
+            onClick={toggleDark}
             className="dark:bg-[#3e7dff] bg-white rounded-full p-1"
           >
-            <Image className=" " src={dark} alt="dark" />
+            <IoMoon className="dark:text-white" />
           </button>
         </div>
         <Link
@@ -114,13 +121,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
         >
           Sign In
         </Link>
-        <Image
+
+        <FaBars
+          className="md:hidden  dark:text-white text-[1.5rem] transition-colors "
           onClick={() => setIsOpen(true)}
-          width={35}
-          height={30}
-          className="md:hidden text-[2rem]"
-          src={darkMode ? barwhite : bar}
-          alt="toggle"
         />
       </div>
 

@@ -1,7 +1,4 @@
 "use client";
-import close from '../../public/close.svg'
-import Image from 'next/image';
-
 import { Modal } from "flowbite-react";
 
 export function SearchModal({ openModal, setOpenModal }) {

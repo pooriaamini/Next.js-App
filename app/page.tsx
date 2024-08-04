@@ -4,28 +4,25 @@ import NavImage from "./components/NavImage";
 import Navbar from "./components/Navbar";
 import FeaturesSection from "./components/FeaturesSection";
 import { useState } from "react";
-import TimeLine from './components/TimeLine'
+import TimeLine from "./components/TimeLine";
+import { ModeProvider, useDark } from "./contexts/ModeContext";
 
 export default function Home() {
 
-  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className=" background dark:bg-dark-mode   ">
+    <ModeProvider>
+      <div className=" background dark:bg-dark-mode   ">
+        <Navbar  />
 
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <NavImage />
 
-      <NavImage  />
+        <HomeSection  />
+        <FeaturesSection />
 
-      <HomeSection darkMode={darkMode} />
-      <FeaturesSection />
-
-      <TimeLine/>
-
-
-      
-
-    </div>
+        <TimeLine />
+      </div>
+    </ModeProvider>
   );
 }
 
