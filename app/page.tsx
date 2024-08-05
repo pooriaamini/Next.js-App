@@ -9,10 +9,14 @@ import { ModeProvider } from "./contexts/ModeContext";
 import Footer from './components/Footer'
 
 export default function Home() {
+
+
   return (
     <ModeProvider>
-      <div className=" background dark:bg-dark-mode   ">
-        <Navbar />
+      <div className=" background dark:bg-dark-mode relative   ">
+        <Navbar   />
+
+        
 
         <NavImage />
 
@@ -22,6 +26,7 @@ export default function Home() {
 
         <ScrollToTop />
         <Footer/>
+        
       </div>
     </ModeProvider>
   );

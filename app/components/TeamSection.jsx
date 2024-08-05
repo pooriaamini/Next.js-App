@@ -45,7 +45,7 @@ function TeamSection() {
         {cardItem.map((item, index) => {
           return (
             <div key={index} className="flex flex-col items-center justify-center gap-4 h-auto bg-sky-100 dark:bg-[#131b4dcc] p-6 rounded-2xl transition duration-400 ease-in-out border-b-4 border-transparent	 hover:border-b-4 hover:border-[#0070f3] ">
-              <Image src={item.src} />
+              <Image src={item.src} alt={item.job} />
               <p className="text-xl text-black dark:text-white">{item.name}</p>
               <p className="text-[#637381] dark:text-[#b5b3bc]">{item.job}</p>
               <div className="flex flex-row gap-4">
@@ -57,6 +57,7 @@ function TeamSection() {
             </div>
           );
         })}
+        
       </div>
     </section>
   );

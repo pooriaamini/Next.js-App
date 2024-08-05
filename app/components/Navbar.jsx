@@ -58,8 +58,6 @@ export default function Navbar() {
     };
   }, [handleScroll]);
 
-  // drawer toogle
-  const handleClose = () => setIsOpen(false);
 
   return (
     <header
@@ -114,11 +112,15 @@ export default function Navbar() {
           >
             Sign In
           </Link>
-          <FaBars
+          <FaBars 
           className="md:hidden  dark:text-white text-[1.5rem] transition-colors "
         />
 
         </div>
+      
+    
+
+
     
     </header>
   );
