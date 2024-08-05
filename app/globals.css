@@ -3,39 +3,17 @@
 @tailwind utilities;
 
 
-@keyframes fade{
-  from{
-    opacity: 0;
-
-  }
-  to{
-    opacity: 1;
-  }
-}
-.fade-in{
-  animation: fade .5s;
-
-}
-
 .background{
   background-image: linear-gradient(rgb(62, 125, 255,.2) 0%, rgba(62, 125, 255, 0) 100%);
   transition:  all  .2s;
   height: auto;
 }
 
-
-
-
-
 .drawer.effect{
   
   transition: all .3s;
 }
 
-nav.navigation ul.list a:hover{
-  color: hsl(220, 100%, 62%);
-  transition:color .2s;
-}
 
 .Sign-btn:hover{
   background-color: #3e7dff;
