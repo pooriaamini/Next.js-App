@@ -20,8 +20,8 @@ const navItems = [
     path: "/#features",
   },
   {
-    name: "Roadmap",
-    path: "#/roadmap",
+    name: "Team",
+    path: "/#team",
   },
   {
     name: "Pages",

@@ -18,7 +18,7 @@ export default function FeaturesSection() {
          
           Best Features
         </p>
-        <p className="text-[#637381] dark:text-[#b5b3bc] text-[1.15rem] lg:text-[1.2rem] lg:w-[60%] w-[100%] ">
+        <p className="text-[#637381] dark:text-[#b5b3bc] text-[1.15rem] px-8 lg:text-[1.2rem] w-auto md:w-[800px] ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
           congue arcu, In et dignissim quam condimentum vel.
         </p>

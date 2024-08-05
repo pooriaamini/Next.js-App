@@ -3,9 +3,12 @@ import HomeSection from "./components/HomeSection";
 import NavImage from "./components/NavImage";
 import Navbar from "./components/Navbar";
 import FeaturesSection from "./components/FeaturesSection";
-import { useState } from "react";
-import TimeLine from "./components/TimeLine";
-import { ModeProvider, useDark } from "./contexts/ModeContext";
+import TeamSection from './components/TeamSection'
+import ScrollToTop from './components/ScrollToTop'
+import { ModeProvider} from "./contexts/ModeContext";
+
+
+
 
 
 export default function Home() {
@@ -20,8 +23,9 @@ export default function Home() {
 
         <HomeSection  />
         <FeaturesSection />
-
-        <TimeLine />
+        <TeamSection/>
+        
+<ScrollToTop/>
       </div>
     </ModeProvider>
   );
