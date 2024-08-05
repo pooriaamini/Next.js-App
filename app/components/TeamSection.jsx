@@ -35,7 +35,7 @@ function TeamSection() {
         <p className="text-2xll  lg:text-[2.5rem] font-extrabold text-black dark:text-white">
           Meet out Team
         </p>
-        <p className="text-[1rem] lg:text-xl text-[#637381] dark:text-[#b5b3bc] self-center px-8 w-auto md:w-[800px]">
+        <p className="text-[1rem] lg:text-xl text-[#637381] dark:text-[#b5b3bc] self-center px-8 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
           congue arcu, In et dignissim quam condimentum vel.
         </p>

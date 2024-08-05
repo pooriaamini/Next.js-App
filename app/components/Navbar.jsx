@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={` sticky top-0 bg-transparent dark:bg-transparent w-full    flex items-center justify-between  px-4 lg:px-8   py-4 z-50 ${
+      className={` sticky top-0 bg-transparent dark:bg-transparent w-full    flex items-center justify-between  px-4   py-4 z-50 ${
         isSticky
           ? " bg-white  dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
           : "  "
@@ -110,7 +110,7 @@ export default function Navbar() {
           </div>
           <Link
             href=""
-            className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
+            className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
           >
             Sign In
           </Link>
