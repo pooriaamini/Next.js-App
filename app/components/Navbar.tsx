@@ -11,7 +11,7 @@ import { FaBars } from "react-icons/fa6";
 
 const navItems = [
   {
-    name: "Home",
+    name : "Home",
     path: "/#home",
   },
   {
@@ -31,6 +31,7 @@ const navItems = [
     path: "#support",
   },
 ];
+
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);

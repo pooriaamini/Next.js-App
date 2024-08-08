@@ -1,6 +1,15 @@
 import Image from "next/image";
 
-function CardShow({ item }) {
+interface CardItems{
+  img:string,
+  subject:string,
+  text:string
+}
+
+
+function CardShow({ item  }:{
+  item:CardItems
+}) {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-3 px-8 ">
       <div className="bg-[#3e7dff] p-4 rounded-full">

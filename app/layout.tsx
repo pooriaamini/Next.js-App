@@ -18,14 +18,10 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body className={`${inter.className} `}>
-        
-        
         {children}
-      
 
         <SpeedInsights />
       </body>
     </html>
   );
 }
-

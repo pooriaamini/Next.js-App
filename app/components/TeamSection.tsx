@@ -8,25 +8,27 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
+const cardItem = [
+  {
+    src: image1,
+    name: "Matheus Ferrero",
+    job: "Marketing Expert",
+  },
+  { src: image2, name: "Eva Hudson", job: "Blockchain Developer" },
+  {
+    src: image3,
+    name: "Jackie Sanders",
+    job: "Creative Designer",
+  },
+  {
+    src: image4,
+    name: "Jackie Sanders",
+    job: "SEO Expert",
+  },
+];
+
 function TeamSection() {
-  const cardItem = [
-    {
-      src: image1,
-      name: "Matheus Ferrero",
-      job: "Marketing Expert",
-    },
-    { src: image2, name: "Eva Hudson", job: "Blockchain Developer" },
-    {
-      src: image3,
-      name: "Jackie Sanders",
-      job: "Creative Designer",
-    },
-    {
-      src: image4,
-      name: "Jackie Sanders",
-      job: "SEO Expert",
-    },
-  ];
+  
 
   return (
     <section id="team" className="mt-12 flex flex-col gap-12">

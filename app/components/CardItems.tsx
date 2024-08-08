@@ -6,7 +6,13 @@ import profit from "../../public/profit.svg";
 import safe from "../../public/safe.svg";
 import CardShow from "./CardShow";
 
-const cardItem = [
+interface CardItems{
+  img:string,
+  subject:string,
+  text:string
+}
+
+const cardItem : CardItems[] = [
   {
     img: safe,
     subject: "Safe & Secure",
