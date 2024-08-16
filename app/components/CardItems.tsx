@@ -1,9 +1,9 @@
-import cast from "../../public/cast.svg";
-import bonus from "../../public/bonus.svg";
-import access from "../../public/access.svg";
-import storage from "../../public/storage.svg";
-import profit from "../../public/profit.svg";
-import safe from "../../public/safe.svg";
+import cast from "../../public/icons/cast.svg";
+import bonus from "../../public/icons/bonus.svg";
+import access from "../../public/icons/access.svg";
+import storage from "../../public/icons/storage.svg";
+import profit from "../../public/icons/profit.svg";
+import safe from "../../public/icons/safe.svg";
 import CardShow from "./CardShow";
 
 interface CardItems{

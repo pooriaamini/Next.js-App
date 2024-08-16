@@ -1,6 +1,6 @@
 import Image from "next/image";
-import here1 from "@/public/hero-shape-1.svg";
-import here2 from "@/public/hero-shape-2.svg";
+import here1 from "../../public/icons/hero-shape-1.svg";
+import here2 from "../../public/icons/hero-shape-2.svg";
 
 export default function NavImage() {
   return (

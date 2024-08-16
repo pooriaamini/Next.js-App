@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import TooltipIcon from "./TooltipIcon";
-import uideck from "../../public/uideck.svg";
-import tailgrid from "../../public/tailgrids.svg";
-import lineicons from "../../public/lineicons.svg";
-import ayroui from "../../public/ayroui.svg";
-import plainadmin from "../../public/plainadmin.svg";
-import uideckwhite from "../../public/uideck-white.svg";
-import tailgridwhite from "../../public/TailGrids-white.svg";
-import lineiconwhite from "../../public/LineIcons-white.svg";
-import ayrouiwhite from "../../public/AyroUI-white.svg";
-import plainadminwhite from "../../public/PlainAdmin-white.svg";
+import uideck from "../../public/icons/uideck.svg";
+import tailgrid from "../../public/icons/tailgrids.svg";
+import lineicons from "../../public/icons/lineicons.svg";
+import ayroui from "../../public/icons/ayroui.svg";
+import plainadmin from "../../public/icons/plainadmin.svg";
+import uideckwhite from "../../public/icons/uideck-white.svg";
+import tailgridwhite from "../../public/icons/TailGrids-white.svg";
+import lineiconwhite from "../../public/icons/LineIcons-white.svg";
+import ayrouiwhite from "../../public/icons/AyroUI-white.svg";
+import plainadminwhite from "../../public/icons/PlainAdmin-white.svg";
 import { useDark } from "../../src/contexts/ModeContext";
 
 export default function HomeSection() {

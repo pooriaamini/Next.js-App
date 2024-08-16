@@ -1,11 +1,11 @@
 import Image from "next/image";
 import {  Tooltip } from "flowbite-react";
-import bitcoin from "@/public/bitcoin.svg";
-import bitcoin1 from "@/public/bitcoin1.svg";
-import bitcoin2 from "@/public/bitcoin2.svg";
-import bitcoin3 from "@/public/bitcoin3.svg";
-import bitcoin4 from "@/public/bitcoin4.svg";
-import bitcoin5 from "@/public/bitcoin5.svg";
+import bitcoin from "../../public/icons/bitcoin.svg";
+import bitcoin1 from "../../public/icons/bitcoin.svg";
+import bitcoin2 from "../../public/icons/bitcoin2.svg";
+import bitcoin3 from "../../public/icons/bitcoin3.svg";
+import bitcoin4 from "../../public/icons/bitcoin4.svg";
+import bitcoin5 from "../../public/icons/bitcoin5.svg";
 
 const btn=[
   {
