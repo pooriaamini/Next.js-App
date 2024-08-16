@@ -1,4 +1,4 @@
-"use client";
+
 
 import HomeSection from "./components/HomeSection";
 import NavImage from "./components/NavImage";
@@ -7,17 +7,14 @@ import FeaturesSection from "./components/FeaturesSection";
 import TeamSection from "./components/TeamSection";
 import ScrollToTop from "./components/ScrollToTop";
 import { ModeProvider } from "./contexts/ModeContext";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 
 export default function Home() {
-
-
   return (
-    <ModeProvider>
-      <div className=" background dark:bg-dark-mode relative   ">
-        <Navbar   />
 
-        
+    <div className=" background dark:bg-dark-mode relative   ">
+      <ModeProvider>
+        <Navbar />
 
         <NavImage />
 
@@ -26,9 +23,9 @@ export default function Home() {
         <TeamSection />
 
         <ScrollToTop />
-        <Footer/>
-        
-      </div>
-    </ModeProvider>
+        <Footer />
+      </ModeProvider>
+
+    </div>
   );
 }

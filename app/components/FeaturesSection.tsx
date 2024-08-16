@@ -1,3 +1,5 @@
+"use client";
+
 import CardItems from "./CardItems";
 import { motion } from "framer-motion";
 export default function FeaturesSection() {
