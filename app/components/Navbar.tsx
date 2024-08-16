@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { useDark } from "../contexts/ModeContext";
+import { useDark } from "../../app/contexts/ModeContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";

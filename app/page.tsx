@@ -1,13 +1,13 @@
 "use client";
 
-import HomeSection from "../src/components/HomeSection";
-import NavImage from "../src/components/NavImage";
-import Navbar from "../src/components/Navbar";
-import FeaturesSection from "../src/components/FeaturesSection";
-import TeamSection from "../src/components/TeamSection";
-import ScrollToTop from "../src/components/ScrollToTop";
-import { ModeProvider } from "../src/contexts/ModeContext";
-import Footer from '../src/components/Footer'
+import HomeSection from "./components/HomeSection";
+import NavImage from "./components/NavImage";
+import Navbar from "./components/Navbar";
+import FeaturesSection from "./components/FeaturesSection";
+import TeamSection from "./components/TeamSection";
+import ScrollToTop from "./components/ScrollToTop";
+import { ModeProvider } from "./contexts/ModeContext";
+import Footer from './components/Footer'
 
 export default function Home() {
 
