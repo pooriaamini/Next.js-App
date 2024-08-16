@@ -10,7 +10,7 @@ export default function FeaturesSection() {
     }}
     transition={{duration:.5,delay:.2}}
 
-      id="features"
+     
       className="features mt-[5rem] flex flex-col gap-4 items-center"
     >
 

@@ -1,10 +1,17 @@
+"use client";
 
 import { createContext , useContext, useState  } from "react";
 
-const ModeContext=createContext();
+interface ModeContextType {
+    darkMode: boolean;
+    toggleDark: () => void;
+    toggleLight: () => void;
+  }
+
+const ModeContext=createContext<ModeContextType | undefined>(undefined);
 
 
-function ModeProvider({children}){
+function ModeProvider({children}:{  children: React.ReactNode}){
 
     const [darkMode, setDarkMode] = useState(false);
 

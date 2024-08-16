@@ -12,7 +12,7 @@ import tailgridwhite from "../../public/TailGrids-white.svg";
 import lineiconwhite from "../../public/LineIcons-white.svg";
 import ayrouiwhite from "../../public/AyroUI-white.svg";
 import plainadminwhite from "../../public/PlainAdmin-white.svg";
-import { useDark } from "../contexts/ModeContext";
+import { useDark } from "../../src/contexts/ModeContext";
 
 export default function HomeSection() {
 
@@ -24,7 +24,7 @@ export default function HomeSection() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      id="home"
+     
       className="home   mt-[5rem] flex flex-col items-center gap-4 justify-center "
     >
       <p className="text-[1.8rem] text-black dark:text-white w-[90%]  lg:w-[60vw] self-center   px-4 lg:px-0  lg:text-[2.25rem]  text-center font-bold">

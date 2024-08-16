@@ -1,8 +1,8 @@
 import Image from "next/image";
-import image1 from "@/public/image-01.webp";
-import image2 from "@/public/image-02.webp";
-import image3 from "@/public/image-03.webp";
-import image4 from "@/public/image-04.webp";
+import image1 from "../../public/images/image-01.webp";
+import image2 from "../../public/images/image-02.webp";
+import image3 from "../../public/images/image-03.webp";
+import image4 from "../../public/images/image-04.webp"
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -31,7 +31,7 @@ function TeamSection() {
   
 
   return (
-    <section id="team" className="mt-12 flex flex-col gap-12">
+    <section  className="mt-12 flex flex-col gap-12">
       <div className="flex flex-col gap-3 items-center justify-center text-center  ">
         <p className="text-[#3e7dff] font-bold text-[1.2rem]">OUT TEAM</p>
         <p className="text-2xll  lg:text-[2.5rem] font-extrabold text-black dark:text-white">
