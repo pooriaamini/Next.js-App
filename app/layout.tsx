@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./styles/globals.css";
+import Header from "./components/Header";
+import { ModeProvider } from "./contexts/ModeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <body className={`${inter.className} `}>
+   <ModeProvider>
+
+     <html className="scroll-smooth" lang="en">
+      <body className={`${inter.className} background dark:bg-dark-mode relative  `}>
+        <Header/>
+
         {children}
 
         <SpeedInsights />
       </body>
     </html>
+   </ModeProvider>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { useDark } from "../../app/contexts/ModeContext";
+import { useDark } from "../contexts/ModeContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
@@ -33,7 +33,8 @@ const navItems = [
 ];
 
 
-export default function Navbar() {
+export default function Header() {
+
   const [isSticky, setIsSticky] = useState(false);
   const { darkMode, toggleDark, toggleLight } = useDark();
 
@@ -108,7 +109,7 @@ export default function Navbar() {
             </button>
           </div>
           <Link
-            href=""
+            href="/auth/signin"
             className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
           >
             Sign In
@@ -119,10 +120,6 @@ export default function Navbar() {
 
         </div>
       
-    
-
-
-    
     </header>
   );
 }
