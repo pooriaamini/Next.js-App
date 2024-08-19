@@ -14,7 +14,7 @@ import tailgridwhite from "../../public/icons/TailGrids-white.svg";
 import lineiconwhite from "../../public/icons/LineIcons-white.svg";
 import ayrouiwhite from "../../public/icons/AyroUI-white.svg";
 import plainadminwhite from "../../public/icons/PlainAdmin-white.svg";
-import { useDark } from "../../app/contexts/ModeContext";
+import { useDark } from "../contexts/modeContext";
 
 export default function HomeSection() {
 

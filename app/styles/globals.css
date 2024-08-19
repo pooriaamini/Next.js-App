@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .background{
   background-image: linear-gradient(rgb(62, 125, 255,.2) 0%, rgba(62, 125, 255, 0) 100%);
   transition:  all  .2s;
@@ -53,4 +54,9 @@
 }
 .scroll-to-top-button:hover {
   opacity: 1;
+}
+
+.button-bg{
+  --tw-text-opacity: 1;
+  background-color: rgb(62 125 255/var(--tw-text-opacity));
 }

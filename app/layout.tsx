@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./styles/globals.css";
 import Header from "./components/Header";
-import { ModeProvider } from "./contexts/ModeContext";
+import { ModeProvider } from "./contexts/modeContext";
 import NavImage from "./components/NavImage";
 import Footer from "./components/Footer";
 
@@ -28,6 +28,7 @@ export default function RootLayout({
         <Header/>
         <NavImage />
         {children}
+        
         <Footer />
 
         <SpeedInsights />

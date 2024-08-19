@@ -1,17 +1,24 @@
-import { IoMoon } from "react-icons/io5";
-import { IoSunny } from "react-icons/io5";
+'use client'
+
+import { useState } from "react";
+
 function SelectionForm() {
+
+  const [isActive,setIsActive]=useState<Boolean>(false)
+
     return (  
-        <div className=" p-1 mt-8   flex justify-center gap-2  items-center border-[1px] dark:border-[#637381] rounded-lg ">
-        <button
-          className="  p-1 rounded-lg text-[#3e7dff] bg-[#3e7dff0d] dark:bg-sky-950 px-10 py-3 "
+        <div className=" p-1 mt-8   flex flex-col lg:flex-row justify-center gap-1 lg:gap-2  self-stretch lg:self-auto  items-center border-[1px] dark:border-[#637381] rounded-lg ">
+
+        <button onClick={()=>setIsActive(false)}
+
+          className={` ${isActive ? 'bg-transparent text-[#b5b3bc] dark:bg-[#2c303b] '  :  'text-[#3e7dff]  bg-[#3e7dff0d]'}   px-10 py-3 rounded-lg    -bg self-stretch lg:self-auto   `}
         >
           Magic Link
         </button>
 
-        <button
+        <button onClick={()=>setIsActive(true)}
           
-          className=" rounded-lg  p-1 bg-[#2c303b] text-[#b5b3bc] px-10 py-3"
+          className={` ${isActive ? 'text-[#3e7dff] bg-[#3e7dff0d]' : 'bg-transparent text-[#b5b3bc] dark:bg-[#2c303b]'} rounded-lg  px-10 py-3     self-stretch lg:self-auto `}
         >
           Password
         </button>
