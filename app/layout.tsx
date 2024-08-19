@@ -4,6 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./styles/globals.css";
 import Header from "./components/Header";
 import { ModeProvider } from "./contexts/ModeContext";
+import NavImage from "./components/NavImage";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +24,11 @@ export default function RootLayout({
 
      <html className="scroll-smooth" lang="en">
       <body className={`${inter.className} background dark:bg-dark-mode relative  `}>
+        
         <Header/>
-
+        <NavImage />
         {children}
+        <Footer />
 
         <SpeedInsights />
       </body>
