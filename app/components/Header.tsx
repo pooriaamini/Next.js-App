@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { useDark } from "../contexts/modeContext";
+import {useThem } from "../contexts/ThemContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
@@ -36,7 +36,7 @@ const navItems = [
 export default function Header() {
 
   const [isSticky, setIsSticky] = useState(false);
-  const { darkMode, toggleDark, toggleLight } = useDark();
+  const { darkMode, toggleDark, toggleLight } = useThem();
 
   // dark moode toggle
   useEffect(() => {

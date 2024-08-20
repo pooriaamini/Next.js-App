@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./styles/globals.css";
 import Header from "./components/Header";
-import { ModeProvider } from "./contexts/modeContext";
+import { ThemProvider } from "./contexts/ThemContext";
 import NavImage from "./components/NavImage";
 import Footer from "./components/Footer";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <ModeProvider>
+   <ThemProvider>
 
      <html className="scroll-smooth" lang="en">
       <body className={`${inter.className} background dark:bg-dark-mode relative  `}>
@@ -34,6 +34,6 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
-   </ModeProvider>
+   </ThemProvider>
   );
 }

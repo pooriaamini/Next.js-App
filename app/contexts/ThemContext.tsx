@@ -2,22 +2,23 @@
 
 import { createContext , useContext, useState  } from "react";
 
-interface ModeContextType {
+interface ThemContextType {
     darkMode: boolean;
     toggleDark: () => void;
     toggleLight: () => void;
   }
 
-const ModeContext=createContext<ModeContextType | undefined>(undefined);
+const ThemContext=createContext<ThemContextType | undefined>(undefined);
 
 
-function ModeProvider({children}:{  children: React.ReactNode}){
+function ThemProvider({children}:{  children: React.ReactNode}){
 
     const [darkMode, setDarkMode] = useState(false);
 
 const toggleDark=()=>{
     setDarkMode(true)
 }
+
 
 const toggleLight=()=>{
     setDarkMode(false)
@@ -26,18 +27,19 @@ const toggleLight=()=>{
 
 
     return(
-        <ModeContext.Provider value={{darkMode,toggleDark,toggleLight}}>
+        <ThemContext.Provider value={{darkMode,toggleDark,toggleLight}}>
 
             {children}
 
-        </ModeContext.Provider>
+        </ThemContext.Provider>
     )
 }
 
-function useDark(){
-    const context=useContext(ModeContext)
+function useThem(){
+    
+    const context=useContext(ThemContext)
     if(context===undefined)
         throw new Error("PostContext was used outside of the PostProvider");
     return context;
 }
-export {ModeProvider,useDark}
+export {ThemProvider,useThem}
