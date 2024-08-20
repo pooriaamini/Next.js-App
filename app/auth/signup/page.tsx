@@ -1,5 +1,4 @@
 import ActiveButton from "@/app/components/ActiveButtonInForm";
-import Active from "@/app/components/ActiveButtonInForm";
 import SelectionForm from "@/app/components/SelectionForm";
 import SignupHeader from "@/app/components/SignupHeader";
 import { ActiveProvider } from "@/app/contexts/activeContext";

@@ -1,9 +1,8 @@
 function SignupPassword() {
     return ( 
-        <form action="
-        ">
-            <div>agegarr</div>
-        </form>
+        < >
+            <div>signup Password</div>
+        </>
      );
 }
 
