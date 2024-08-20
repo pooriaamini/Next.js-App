@@ -1,10 +1,12 @@
 'use client'
 
-import { useState } from "react";
+import { useActive } from "../contexts/activeContext";
+
 
 function SelectionForm() {
 
-  const [isActive,setIsActive]=useState<Boolean>(false)
+  const {isActive,setIsActive}=useActive()
+  
 
     return (  
         <div className=" p-1 mt-8   flex flex-col lg:flex-row justify-center gap-1 lg:gap-2  self-stretch lg:self-auto  items-center border-[1px] dark:border-[#637381] rounded-lg ">

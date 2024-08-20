@@ -1,4 +1,9 @@
+import { useState } from "react";
+
+
 function EmailForm() {
+
+    
     return ( 
         <form className="flex flex-col gap-6 items-center self-stretch justify-center" action="">
             <input className="w-80 border flex  border-gray-200 dark:border-[#637381] py-3 px-4 rounded-full bg-white dark:bg-[#1e2763] mt-8 dark:placeholder:text-[#b5b3bc] p-3" placeholder="Email" type="text" name="" id="" />
