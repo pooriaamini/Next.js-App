@@ -22,7 +22,7 @@ function SigninPassword() {
       <button>sign in</button>
 
       <p className="singup flex justify-center items-center">
-        <span>Don't you have an account?</span>
+        <span>Do you have an account?</span>
         <span>Sign up</span>
       </p>
     </form>
