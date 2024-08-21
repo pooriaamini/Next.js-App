@@ -8,7 +8,7 @@ function SigninHeader() {
       <h2 className="dark:text-[#637381] text-[#b5b3bc]  ">
         Login to your account for a faster checkout.
       </h2>
-      <button className="flex flex-row-reverse gap-4 items-center justify-center text-center w-80 border border-gray-200 dark:border-[#637381] py-3 px-4 rounded-full bg-white dark:bg-[#1e2763] mt-8">
+      <button className="flex flex-row-reverse gap-4 items-center justify-center text-center w-96 border border-gray-200 dark:border-[#637381] py-3 px-4 rounded-full bg-white dark:bg-[#1e2763] mt-8">
         <p>Sign in with Google</p>
         <Image src={googleSvg} alt="google" />
       </button>
