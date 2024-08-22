@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 import { usePathname } from "next/navigation";
 import { useActive } from "../contexts/activeContext";
 import EmailForm from "./EmailForm";
@@ -7,26 +6,25 @@ import SigninPassword from "./SigninPassword";
 import SignupPassword from "./SignupPassword";
 
 function ActiveButton() {
+  const pathname = usePathname();
 
-   const pathname= usePathname()
-
-   const isSignUp=pathname.includes('signup')==true
-
-    console.log(isSignUp);
-    
+  const isSignUp = pathname.includes("signup") == true;
 
 
-
-   
-
-    const {isActive}=useActive()
-    return ( 
-        <>
-        
-        {isActive ? isSignUp ? <SignupPassword/> : <SigninPassword/> : <EmailForm />}
-        
-        </>
-     );
+  const { isActive } = useActive();
+  return (
+    <>
+      {isActive ? (
+        isSignUp ? (
+          <SignupPassword />
+        ) : (
+          <SigninPassword />
+        )
+      ) : (
+        <EmailForm />
+      )}
+    </>
+  );
 }
 
 export default ActiveButton;

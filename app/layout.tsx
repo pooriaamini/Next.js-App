@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./styles/globals.css";
 import Header from "./components/Header";
 import { ThemProvider } from "./contexts/ThemContext";
 import NavImage from "./components/NavImage";
 import Footer from "./components/Footer";
+import "./styles/globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

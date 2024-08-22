@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import {useThem } from "../contexts/ThemContext";
+import { useThem } from "../contexts/ThemContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
@@ -11,7 +11,7 @@ import { FaBars } from "react-icons/fa6";
 
 const navItems = [
   {
-    name : "Home",
+    name: "Home",
     path: "/#home",
   },
   {
@@ -32,14 +32,10 @@ const navItems = [
   },
 ];
 
-
 export default function Header() {
-
   const [isSticky, setIsSticky] = useState(false);
   const { darkMode, toggleDark, toggleLight } = useThem();
 
-  // dark moode toggle
-  
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -61,7 +57,6 @@ export default function Header() {
     };
   }, [handleScroll]);
 
-
   return (
     <header
       className={` sticky top-0 bg-transparent dark:bg-transparent w-full    flex items-center justify-between  px-4   py-4 z-50 ${
@@ -79,48 +74,40 @@ export default function Header() {
         />
       </div>
 
-      
-        <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] dark:text-white ">
-          {navItems.map((item, index) => {
-            return (
-              <li
-                className="hover:text-[#3e7dff] transition-colors"
-                key={index}
-              >
-                <Link href={item.path}>{item.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
+      <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] dark:text-white ">
+        {navItems.map((item, index) => {
+          return (
+            <li className="hover:text-[#3e7dff] transition-colors" key={index}>
+              <Link href={item.path}>{item.name}</Link>
+            </li>
+          );
+        })}
+      </ul>
 
-        <div className="flex justify-normal items-center gap-4  ">
-          <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-2 rounded-full flex gap-1  items-center">
-            <button
-              onClick={toggleLight}
-              className="dark:bg-white  bg-[#3e7dff] rounded-full p-1"
-            >
-              <IoSunny className="text-white dark:text-black" />
-            </button>
-
-            <button
-              onClick={toggleDark}
-              className="dark:bg-[#3e7dff] bg-white rounded-full p-1"
-            >
-              <IoMoon className="dark:text-white" />
-            </button>
-          </div>
-          <Link
-            href="/auth/signin"
-            className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
+      <div className="flex justify-normal items-center gap-4  ">
+        <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-2 rounded-full flex gap-1  items-center">
+          <button
+            onClick={toggleLight}
+            className="dark:bg-white  bg-[#3e7dff] rounded-full p-1"
           >
-            Sign In
-          </Link>
-          <FaBars 
-          className="md:hidden  dark:text-white text-[1.5rem] transition-colors "
-        />
+            <IoSunny className="text-white dark:text-black" />
+          </button>
 
+          <button
+            onClick={toggleDark}
+            className="dark:bg-[#3e7dff] bg-white rounded-full p-1"
+          >
+            <IoMoon className="dark:text-white" />
+          </button>
         </div>
-      
+        <Link
+          href="/auth/signin"
+          className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
+        >
+          Sign In
+        </Link>
+        <FaBars className="md:hidden  dark:text-white text-[1.5rem] transition-colors " />
+      </div>
     </header>
   );
 }

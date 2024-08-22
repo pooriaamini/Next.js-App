@@ -17,16 +17,13 @@ import plainadminwhite from "../../public/icons/PlainAdmin-white.svg";
 import { useThem } from "../contexts/ThemContext";
 
 export default function HomeSection() {
-
-  const {darkMode}=useThem()
-
+  const { darkMode } = useThem();
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-     
       className="home   flex flex-col items-center gap-4 justify-center "
     >
       <p className="text-[1.8rem] text-black dark:text-white w-[90%]  lg:w-[60vw] self-center   px-4 lg:px-0  lg:text-[2.25rem]  text-center font-bold">
@@ -42,7 +39,6 @@ export default function HomeSection() {
 
       <div className=" mt-4 self-center   flex flex-wrap justify-center gap-4">
         <TooltipIcon />
-
       </div>
 
       <button className="bg-[#3e7dff]  py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">

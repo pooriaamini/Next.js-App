@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SignupHeader() {
   return (
-    <form className="flex flex-col gap-2 items-center">
+    <form className="flex flex-col gap-4 items-center">
       <h1 className="font-bold text-[1.75rem]">Create your account</h1>
       <h2 className="dark:text-[#637381] text-[#b5b3bc]">
         It&apos;s totally free and super easy

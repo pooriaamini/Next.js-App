@@ -6,13 +6,13 @@ import profit from "../../public/icons/profit.svg";
 import safe from "../../public/icons/safe.svg";
 import CardShow from "./CardShow";
 
-interface CardItems{
-  img:string,
-  subject:string,
-  text:string
+interface CardItems {
+  img: string;
+  subject: string;
+  text: string;
 }
 
-const cardItem : CardItems[] = [
+const cardItem: CardItems[] = [
   {
     img: safe,
     subject: "Safe & Secure",
@@ -47,7 +47,7 @@ const cardItem : CardItems[] = [
 
 export default function cardItems() {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-8 mt-5   " >
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-8 mt-5   ">
       {cardItem.map((item, index) => {
         return <CardShow item={item} key={index} />;
       })}
