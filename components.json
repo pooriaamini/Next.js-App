@@ -1,5 +1,4 @@
 {
-  "$schema": "https://ui.shadcn.com/schema.json",
   "style": "default",
   "rsc": true,
   "tsx": true,
@@ -7,7 +6,7 @@
     "config": "tailwind.config.ts",
     "css": "app/styles/globals.css",
     "baseColor": "slate",
-    "cssVariables": true,
+    "cssVariables": false,
     "prefix": ""
   },
   "aliases": {

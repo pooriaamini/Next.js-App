@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
-import { ThemProvider } from "./contexts/ThemContext";
 import NavImage from "./components/NavImage";
 import Footer from "./components/Footer";
-import "./styles/globals.css";
-
+import '@/app/styles/globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,20 +20,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <ThemProvider>
+    <html className="scroll-smooth" suppressHydrationWarning lang="en">
+      <body
+        className={`${inter.className} background dark:bg-dark-mode relative  `}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <NavImage />
+          {children}
 
-     <html className="scroll-smooth" lang="en">
-      <body className={`${inter.className} background dark:bg-dark-mode relative  `}>
-        
-        <Header/>
-        <NavImage />
-        {children}
-        
-        <Footer />
+          <Footer />
 
+        </ThemeProvider>
         <SpeedInsights />
+
       </body>
     </html>
-   </ThemProvider>
   );
 }

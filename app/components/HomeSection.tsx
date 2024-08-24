@@ -14,10 +14,13 @@ import tailgridwhite from "../../public/icons/TailGrids-white.svg";
 import lineiconwhite from "../../public/icons/LineIcons-white.svg";
 import ayrouiwhite from "../../public/icons/AyroUI-white.svg";
 import plainadminwhite from "../../public/icons/PlainAdmin-white.svg";
-import { useThem } from "../contexts/ThemContext";
+import { useTheme } from "next-themes";
+
 
 export default function HomeSection() {
-  const { darkMode } = useThem();
+
+  const { theme,setTheme } = useTheme()
+
 
   return (
     <motion.section
@@ -49,22 +52,22 @@ export default function HomeSection() {
         Join the 20,000+ companies using the our platform
       </p>
       <div className="  mt-[1.5rem]  flex flex-wrap justify-center items-center gap-[2.5rem]  ">
-        <Image width={130} alt="uideck" src={darkMode ? uideckwhite : uideck} />
+        <Image width={130} alt="uideck" src={theme=='dark' ? uideckwhite : uideck} />
         <Image
           width={160}
           alt="tailgrid"
-          src={darkMode ? tailgridwhite : tailgrid}
+          src={theme=='dark' ? tailgridwhite : tailgrid}
         />
         <Image
           width={160}
           alt="lineicons"
-          src={darkMode ? lineiconwhite : lineicons}
+          src={theme=='dark' ? lineiconwhite : lineicons}
         />
-        <Image width={150} alt="ayroui" src={darkMode ? ayrouiwhite : ayroui} />
+        <Image width={150} alt="ayroui" src={theme=='dark' ? ayrouiwhite : ayroui} />
         <Image
           width={160}
           alt="plainadmin"
-          src={darkMode ? plainadminwhite : plainadmin}
+          src={theme=='dark' ? plainadminwhite : plainadmin}
         />
       </div>
     </motion.section>
