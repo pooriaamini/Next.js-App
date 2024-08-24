@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {  Tooltip } from "flowbite-react";
 import bitcoin from "../../public/icons/bitcoin.svg";
 import bitcoin1 from "../../public/icons/bitcoin1.svg";
 import bitcoin2 from "../../public/icons/bitcoin2.svg";
@@ -37,8 +36,14 @@ const btn=[
 
 export default function TooltipIcon() {
   return (
-    <>
-       {
+
+    <div>
+          Tooltip
+
+    </div>
+    )
+   
+       {/* {
         btn.map((item,index)=>{
           return <Tooltip className="rounded-full" key={index} content="Bitcoin (BTC)" >
             <button className="bg-white p-1 rounded-full">
@@ -46,7 +51,7 @@ export default function TooltipIcon() {
             </button>
              </Tooltip>
         })
-       }
-    </>
-  );
+       } */}
+  
+  
 }
