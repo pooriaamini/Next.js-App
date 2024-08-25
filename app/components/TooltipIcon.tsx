@@ -37,7 +37,7 @@ const btn=[
 export default function TooltipIcon() {
   return (
 
-    <div>
+    <div className="">
           Tooltip
 
     </div>
