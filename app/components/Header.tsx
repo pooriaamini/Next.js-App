@@ -1,13 +1,12 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { useThem } from "../contexts/ThemContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
 import darkLogo from "../../public/icons/logo-hidden.svg";
-import { IoMoon } from "react-icons/io5";
-import { IoSunny } from "react-icons/io5";
 import { FaBars } from "react-icons/fa6";
+import { useTheme } from "next-themes";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const navItems = [
   {
@@ -34,15 +33,9 @@ const navItems = [
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
-  const { darkMode, toggleDark, toggleLight } = useThem();
+  
+  const { theme,setTheme } = useTheme()
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   const handleScroll = useCallback(() => {
     const offset = window.scrollY;
@@ -67,7 +60,7 @@ export default function Header() {
     >
       <div className="">
         <Image
-          src={darkMode ? darkLogo : logo}
+          src={theme=='dark' ? darkLogo : logo}
           width={150}
           height={150}
           alt="header logo"
@@ -85,21 +78,9 @@ export default function Header() {
       </ul>
 
       <div className="flex justify-normal items-center gap-4  ">
-        <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-2 rounded-full flex gap-1  items-center">
-          <button
-            onClick={toggleLight}
-            className="dark:bg-white  bg-[#3e7dff] rounded-full p-1"
-          >
-            <IoSunny className="text-white dark:text-black" />
-          </button>
+       <ModeToggle/>
 
-          <button
-            onClick={toggleDark}
-            className="dark:bg-[#3e7dff] bg-white rounded-full p-1"
-          >
-            <IoMoon className="dark:text-white" />
-          </button>
-        </div>
+
         <Link
           href="/auth/signin"
           className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "

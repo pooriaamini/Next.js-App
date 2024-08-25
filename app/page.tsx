@@ -1,7 +1,7 @@
 import HomeSection from "./components/HomeSection";
 import FeaturesSection from "./components/FeaturesSection";
 import TeamSection from "./components/TeamSection";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <HomeSection />
         <FeaturesSection />
         <TeamSection />
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
     </div>
   )
 }
