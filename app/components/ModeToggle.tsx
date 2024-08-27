@@ -9,7 +9,7 @@ export function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
-    <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-2 rounded-full flex gap-1  items-center">
+    <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-1 md:p-2 rounded-full flex gap-1  items-center">
       <button
         onClick={() => setTheme("light")}
         className="dark:bg-white  bg-[#3e7dff] rounded-full p-1"

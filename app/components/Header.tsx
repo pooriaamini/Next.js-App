@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
 import darkLogo from "../../public/icons/logo-hidden.svg";
-import { FaBars } from "react-icons/fa6";
 import { useTheme } from "next-themes";
-import { ModeToggle } from "@/components/ModeToggle";
+import { ModeToggle } from "@/app/components/ModeToggle";
+import { FaBars } from "react-icons/fa";
+import Sidebar from "./Sidebar";
 
 const navItems = [
   {
@@ -23,7 +24,7 @@ const navItems = [
   },
   {
     name: "Pages",
-    path: "#/roadmap",
+    path: "#/page",
   },
   {
     name: "Support",
@@ -33,9 +34,10 @@ const navItems = [
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
-  
-  const { theme,setTheme } = useTheme()
 
+  const { theme, setTheme } = useTheme();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = useCallback(() => {
     const offset = window.scrollY;
@@ -51,44 +53,50 @@ export default function Header() {
   }, [handleScroll]);
 
   return (
-    <header
-      className={` sticky top-0 bg-transparent dark:bg-transparent w-full    flex items-center justify-between  px-4   py-4 z-50 ${
-        isSticky
-          ? " bg-white  dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
-          : "  "
-      }  `}
-    >
-      <div className="">
-        <Image
-          src={theme=='dark' ? darkLogo : logo}
-          width={150}
-          height={150}
-          alt="header logo"
-        />
-      </div>
+    <>
+      <header
+        className={` sticky top-0 bg-transparent dark:bg-transparent w-full flex items-center justify-between px-4 py-4 z-50
+          
+          ${
+            isSticky
+              ? " bg-white  dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
+              : "  "
+          }`}
+      >
+        <div className="">
+          <Image className="w-40" src={theme == "dark" ? darkLogo : logo} alt="header logo" />
+        </div>
+        <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] dark:text-white ">
+          {navItems.map((item, index) => {
+            return (
+              <li
+                className="hover:text-[#3e7dff] transition-colors"
+                key={index}
+              >
+                <Link href={item.path}>{item.name}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="flex justify-normal items-center gap-4  ">
+          <ModeToggle />
+          <Link
+            href="/auth/signin"
+            className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
+          >
+            Sign In
+          </Link>
 
-      <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] dark:text-white ">
-        {navItems.map((item, index) => {
-          return (
-            <li className="hover:text-[#3e7dff] transition-colors" key={index}>
-              <Link href={item.path}>{item.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="text-black dark:text-white md:hidden"
+          >
+           <FaBars className="text-lg" />
+          </button>
+        </div>
+      </header>
 
-      <div className="flex justify-normal items-center gap-4  ">
-       <ModeToggle/>
-
-
-        <Link
-          href="/auth/signin"
-          className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
-        >
-          Sign In
-        </Link>
-        <FaBars className="md:hidden  dark:text-white text-[1.5rem] transition-colors " />
-      </div>
-    </header>
+      {isOpen && <Sidebar   isOpen={isOpen} setIsOpen={setIsOpen} />}
+    </>
   );
 }

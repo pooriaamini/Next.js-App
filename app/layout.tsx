@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
-import { PT_Sans } from "next/font/google";
+import { ThemeProvider } from "@/app/contexts/theme-provider";
+import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
 import NavImage from "./components/NavImage";
@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import '@/app/styles/globals.css'
 
 
-const pt_sans=PT_Sans({subsets:['latin'],style:'normal' , weight:'400'});
+const inter=Inter({subsets:['latin'],weight:'400'});
 
 export const metadata: Metadata = {
   title: " Next-js App",
@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" suppressHydrationWarning lang="en">
+    <html className="scroll-smooth overflow-x-hidden" suppressHydrationWarning lang="en ">
       <body
-        className={`${pt_sans.className} background   dark:bg-dark-mode relative  `}
+        className={`${inter.className} background   dark:bg-dark-mode relative  `}
       >
         <ThemeProvider
           attribute="class"

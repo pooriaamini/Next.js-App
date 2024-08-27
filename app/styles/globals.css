@@ -87,3 +87,14 @@
   font-weight: 550;
 }
 
+.hoveranimation{
+  background-image: linear-gradient(105deg, transparent 0%, transparent 50%, #3e7dff 50%);
+  background-size: 230%;
+  transition: all .5s;
+
+  &:hover{
+    background-position: 100%;
+  }
+
+}
+

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import TooltipIcon from "./TooltipIcon";
+import Tooltips from "./Tooltips";
 import uideck from "../../public/icons/uideck.svg";
 import tailgrid from "../../public/icons/tailgrids.svg";
 import lineicons from "../../public/icons/lineicons.svg";
@@ -41,7 +41,7 @@ export default function HomeSection() {
       </p>
 
       <div className=" mt-4 self-center   flex flex-wrap justify-center gap-4">
-        <TooltipIcon />
+        <Tooltips />
       </div>
 
       <button className="bg-[#3e7dff]  py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">
