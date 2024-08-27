@@ -6,7 +6,10 @@ import { IoSunny } from "react-icons/io5";
 import { useTheme } from "next-themes";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const {theme, setTheme } = useTheme();
+
+  
+  
 
   return (
     <div className="bg-[#f5f8ff] dark:bg-[#1e2763] p-1 md:p-2 rounded-full flex gap-1  items-center">

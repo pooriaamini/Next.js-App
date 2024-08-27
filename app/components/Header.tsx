@@ -34,9 +34,7 @@ const navItems = [
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
-
-  const { theme, setTheme } = useTheme();
-
+  const { theme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = useCallback(() => {
@@ -45,6 +43,11 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    // چک کردن وضعیت اسکرول هنگام بارگذاری صفحه
+    const offset = window.scrollY;
+    setIsSticky(offset > 50);
+
+    // اضافه کردن event listener برای اسکرول
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -55,48 +58,38 @@ export default function Header() {
   return (
     <>
       <header
-        className={` sticky top-0 bg-transparent dark:bg-transparent w-full flex items-center justify-between px-4 py-4 z-50
-          
+        className={`sticky top-0 w-full flex items-center justify-between px-4 py-4 z-50
           ${
             isSticky
-              ? " bg-white  dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
-              : "  "
+              ? "bg-white dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
+              : "bg-transparent dark:bg-transparent"
           }`}
       >
         <div className="">
-          <Image className="w-40" src={theme == "dark" ? darkLogo : logo} alt="header logo" />
+          <Image  className="w-40" src={theme == "dark" ? darkLogo : logo} alt="header logo" />
         </div>
-        <ul className=" hidden lg:flex list  gap-[3rem] text-[1.05rem] font-middle text-[#637381] dark:text-white ">
-          {navItems.map((item, index) => {
-            return (
-              <li
-                className="hover:text-[#3e7dff] transition-colors"
-                key={index}
-              >
-                <Link href={item.path}>{item.name}</Link>
-              </li>
-            );
-          })}
+        <ul className="hidden lg:flex gap-[3rem] text-[1.05rem] font-medium text-[#637381] dark:text-white">
+          {navItems.map((item, index) => (
+            <li className="hover:text-[#3e7dff] transition-colors" key={index}>
+              <Link href={item.path}>{item.name}</Link>
+            </li>
+          ))}
         </ul>
-        <div className="flex justify-normal items-center gap-4  ">
+        <div className="flex items-center gap-4">
           <ModeToggle />
           <Link
             href="/auth/signin"
-            className=" hidden md:block  Sign-btn bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff]  rounded-full "
+            className="hidden md:block bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff] rounded-full"
           >
             Sign In
           </Link>
-
-          <button
-            onClick={() => setIsOpen(true)}
-            className="text-black dark:text-white md:hidden"
-          >
-           <FaBars className="text-lg" />
+          <button onClick={() => setIsOpen(true)} className="text-black dark:text-white md:hidden">
+            <FaBars className="text-lg" />
           </button>
         </div>
       </header>
 
-      {isOpen && <Sidebar   isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
     </>
   );
 }

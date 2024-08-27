@@ -52,8 +52,8 @@ function Tooltips() {
     <>
       {btn.map((item, index) => {
         return (
-          <>
-            <TooltipProvider  key={index}>
+          <div key={index}>
+            <TooltipProvider  >
               <Tooltip>
                 <TooltipTrigger className="bg-white p-1 rounded-full">
                   <Image src={item.src} alt={item.alt} />
@@ -63,7 +63,7 @@ function Tooltips() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-          </>
+          </div>
         );
       })}
     </>

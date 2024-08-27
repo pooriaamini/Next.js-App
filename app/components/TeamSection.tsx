@@ -1,8 +1,12 @@
 import Image from "next/image";
-import image1 from "../../public/images/image-01.webp";
-import image2 from "../../public/images/image-02.webp";
-import image3 from "../../public/images/image-03.webp";
-import image4 from "../../public/images/image-04.webp"
+import image1 from "../../public/images/2149101154.jpg";
+
+import image2 from "../../public/images/5162.jpg";
+import image3 from "../../public/images/581.jpg";
+import image4 from "../../public/images/46232.jpg";
+
+
+
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -47,7 +51,7 @@ function TeamSection() {
         {cardItem.map((item, index) => {
           return (
             <div key={index} className="flex flex-col items-center justify-center gap-4 h-auto bg-sky-100 dark:bg-[#131b4dcc] p-6 rounded-2xl transition duration-400 ease-in-out border-b-4 border-transparent	 hover:border-b-4 hover:border-[#0070f3] ">
-              <Image src={item.src} alt={item.job} />
+              <Image className="rounded-md w-56"  src={item.src} alt={item.job} />
               <p className="text-xl text-black dark:text-white">{item.name}</p>
               <p className="text-[#637381] dark:text-[#b5b3bc]">{item.job}</p>
               <div className="flex flex-row gap-4">
