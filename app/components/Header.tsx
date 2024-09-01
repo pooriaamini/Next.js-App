@@ -1,11 +1,11 @@
 "use client";
+
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/icons/logo.svg";
-import darkLogo from "../../public/icons/logo-hidden.svg";
 import { useTheme } from "next-themes";
-import { ModeToggle } from "@/app/components/ModeToggle";
+import { ThemeSwitcher } from "@/app/components/ThemeSwitcher";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 
@@ -57,16 +57,18 @@ export default function Header() {
 
   return (
     <>
-      <header
-        className={`sticky top-0 w-full flex items-center justify-between px-4 py-4 z-50
+      <header 
+        className={`sticky top-0 w-full flex items-center justify-between px-4 py-4 z-50 
           ${
             isSticky
               ? "bg-white dark:bg-[#131b4dcc] bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-80"
               : "bg-transparent dark:bg-transparent"
           }`}
       >
-        <div className="">
-          <Image  className="w-40" src={theme == "dark" ? darkLogo : logo} alt="header logo" />
+        <div className="flex flex-row-reverse gap-4 justify-center items-center">
+          <p className="text-5xl text-blue-600 font-bold tracking-wider	">vezzra</p>
+          <Image className="self-end"  width={40}  src={logo} alt="logo" />
+          
         </div>
         <ul className="hidden lg:flex gap-[3rem] text-[1.05rem] font-medium text-[#637381] dark:text-white">
           {navItems.map((item, index) => (
@@ -76,10 +78,10 @@ export default function Header() {
           ))}
         </ul>
         <div className="flex items-center gap-4">
-          <ModeToggle />
+          <ThemeSwitcher />
           <Link
             href="/auth/signin"
-            className="hidden md:block bg-transparent border border-solid py-2 px-8 text-[#637381] hover:border-transparent border-[#637381] dark:text-white dark:hover:bg-white dark:hover:text-[#3e7dff] rounded-full"
+            className="sign-in-btn hidden md:block   py-2 px-8 text-black border-[1px]  rounded-full"
           >
             Sign In
           </Link>

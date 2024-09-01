@@ -44,30 +44,30 @@ export default function HomeSection() {
         <Tooltips />
       </div>
 
-      <button className="bg-[#3e7dff]  py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">
+      <button className="bg-[#3e7dff]   py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">
         <Link href="">Buy Tokens 47% Off</Link>
       </button>
 
       <p className=" text-center mt-[4rem] text-[1.2rem] lg:text-[1.5rem]  text-black dark:text-white font-semibold ">
         Join the 20,000+ companies using the our platform
       </p>
-      <div className="  mt-[1.5rem]  flex flex-wrap justify-center items-center gap-[2.5rem]  ">
-        <Image width={130} alt="uideck" src={theme=='dark' ? uideckwhite : uideck} />
-        <Image
+      <div className={`  mt-[1.5rem]  flex flex-wrap justify-center items-stretch gap-[2.5rem]  `}>
+        <Image className="bg-violet-400 self-stretch rounded-full icon-bg-hover py-2 px-4" width={130} alt="uideck" src={uideck} />
+        <Image className="bg-violet-400 self-stretch rounded-full icon-bg-hover py-2 px-4" 
           width={160}
           alt="tailgrid"
-          src={theme=='dark' ? tailgridwhite : tailgrid}
+          src={tailgrid}
         />
-        <Image
+        <Image className="bg-violet-400 self-stretch rounded-full icon-bg-hover py-2 px-4"
           width={160}
           alt="lineicons"
-          src={theme=='dark' ? lineiconwhite : lineicons}
+          src={lineicons}
         />
-        <Image width={150} alt="ayroui" src={theme=='dark' ? ayrouiwhite : ayroui} />
-        <Image
+        <Image className="bg-violet-400 self-stretch rounded-full icon-bg-hover py-2 px-4" width={150} alt="ayroui" src={ayroui} />
+        <Image className="bg-violet-400 self-stretch rounded-full icon-bg-hover py-2 px-4"
           width={160}
           alt="plainadmin"
-          src={theme=='dark' ? plainadminwhite : plainadmin}
+          src={plainadmin}
         />
       </div>
     </motion.section>

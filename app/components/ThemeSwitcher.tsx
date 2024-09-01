@@ -5,7 +5,7 @@ import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import { useTheme } from "next-themes";
 
-export function ModeToggle() {
+export function ThemeSwitcher() {
   const {theme, setTheme } = useTheme();
 
   
