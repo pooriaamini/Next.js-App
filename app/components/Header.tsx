@@ -8,7 +8,6 @@ import { useTheme } from "next-themes";
 import { ThemeSwitcher } from "@/app/components/ThemeSwitcher";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "./Sidebar";
-
 const navItems = [
   {
     name: "Home",
@@ -66,7 +65,7 @@ export default function Header() {
           }`}
       >
         <div className="flex flex-row-reverse gap-4 justify-center items-center">
-          <p className="text-5xl text-blue-600 font-bold tracking-wider	">vezzra</p>
+          <p className="text-4xl text-blue-600 font-middletracking-wider font-[cursive]	">vezzra</p>
           <Image className="self-end"  width={40}  src={logo} alt="logo" />
           
         </div>

@@ -9,7 +9,6 @@ export default function Home() {
         <HomeSection />
         <FeaturesSection />
         <TeamSection />
-        {/* <ScrollToTop /> */}
     </div>
   )
 }
