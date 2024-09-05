@@ -1,8 +1,22 @@
+import Link from "next/link";
+
 function SignupPassword() {
   return (
     <form className="mt-12 flex flex-col gap-4" action="">
-      <div className="email flex flex-col  gap-3 items-stretch justify-center">
-        <label htmlFor="">Your Email</label>
+
+<div className="password flex flex-col gap-1 items-stretch justify-center">
+        <label className="ms-2 text-[.9rem]">Full Name</label>
+        <input
+          className="py-3 w-96 border border-gray-200 dark:border-[#637381]  dark:bg-[#1e2763] placeholder:text-[#b5b3bc] px-5 rounded-full placeholder:text-[.9rem]"
+          placeholder="First and last name"
+          type="text"
+          name=""
+          id=""
+        />
+      </div>
+
+      <div className="email flex flex-col  gap-1 items-stretch justify-center">
+        <label className="ms-2 text-[.9rem]">Your Email</label>
         <input
           className="py-3 w-96 border border-gray-200 dark:border-[#637381] dark:bg-[#1e2763] placeholder:text-[#b5b3bc] px-5 rounded-full  placeholder:text-[.9rem]"
           placeholder="Enter Your Email"
@@ -12,8 +26,8 @@ function SignupPassword() {
         />
       </div>
 
-      <div className="password flex flex-col gap-3 items-stretch justify-center">
-        <label htmlFor="">Your Password</label>
+      <div className="password flex flex-col gap-1 items-stretch justify-center">
+        <label className="ms-2 text-[.9rem]">Your Password</label>
         <input
           className="py-3 w-96 border border-gray-200 dark:border-[#637381]  dark:bg-[#1e2763] placeholder:text-[#b5b3bc] px-5 rounded-full placeholder:text-[.9rem]"
           placeholder="Enter Your Password"
@@ -41,10 +55,10 @@ function SignupPassword() {
       </button>
 
       <p className="singup flex justify-center items-center mt-2 text-[.9rem] gap-1 lg:text-[1rem]">
-        <span className="text-[#637381]">Do not you have an account?</span>
-        <span className="text-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000">
-          Sign up
-        </span>
+        <span className="text-[#637381] font-medium">Already using Startup?</span>
+        <Link href='signin' className="text-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000">
+        Sign in
+        </Link>
       </p>
     </form>
   );

@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 function SigninPassword() {
   return (
     <form className="mt-12 flex flex-col gap-4" action="">
-      <div className="email flex flex-col  gap-3 items-stretch justify-center">
-        <label htmlFor="">Your Email</label>
+      <div className="email flex flex-col  gap-1 items-stretch justify-center">
+        <label className="ms-2 text-[.9rem]">Your Email</label>
         <input
           className="py-3 w-96 border border-gray-200 dark:border-[#637381] dark:bg-[#1e2763] placeholder:text-[#b5b3bc] px-5 rounded-full  placeholder:text-[.9rem]"
           placeholder="Enter Your Email"
@@ -12,8 +14,8 @@ function SigninPassword() {
         />
       </div>
 
-      <div className="password flex flex-col gap-3 items-stretch justify-center">
-        <label htmlFor="">Your Password</label>
+      <div className="password flex flex-col gap-1 items-stretch justify-center">
+        <label className="ms-2 text-[.9rem]">Your Password</label>
         <input
           className="py-3 w-96 border border-gray-200 dark:border-[#637381]  dark:bg-[#1e2763] placeholder:text-[#b5b3bc] px-5 rounded-full placeholder:text-[.9rem]"
           placeholder="Enter Your Password"
@@ -31,9 +33,9 @@ function SigninPassword() {
             type="checkbox"
           />
         </p>
-        <span className="text-[#3e7dff] decoration-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000   ">
+        <Link href='forget-password' className="text-[#3e7dff] decoration-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000   ">
           Forgot Password?
-        </span>
+        </Link>
       </p>
 
       <button className="bg-[#3e7dff] text-white font-middle hover:bg-[#3e7dffcc]  p-4 rounded-full  transition duration-500 mt-[1.5rem] ">
@@ -42,9 +44,10 @@ function SigninPassword() {
 
       <p className="singup flex justify-center items-center mt-2 text-[.9rem] gap-1 lg:text-[1rem]">
         <span className="text-[#637381]">Do not you have an account?</span>
-        <span className="text-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000">
-          Sign up
-        </span>
+        <Link href='signup' className="text-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000">
+        Sign up
+        </Link>
+        
       </p>
     </form>
   );
