@@ -79,7 +79,7 @@ export default function Header() {
           <ThemeSwitcher />
           <Link
             href="/auth/signin"
-            className="sign-in-btn hidden md:block   py-2 px-8 text-black border-[1px]  rounded-full"
+            className=" bg-white hidden md:block   py-2 px-8 text-black border-[1px]  rounded-full"
           >
             Sign In
           </Link>

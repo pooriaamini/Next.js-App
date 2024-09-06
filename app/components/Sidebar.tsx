@@ -73,22 +73,19 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         />
       )}
       <motion.div
-        className={`fixed top-0 right-0 h-screen w-[60%] md:w-72 lg:w-80 bg-gradient-to-br from-blue-500 to-indigo-700 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 z-[1000] shadow-xl flex flex-col justify-start items-center rounded-tl-xl`}
+        className={`fixed top-0 right-0 h-screen min-w-80  bg-gradient-to-br from-blue-500 to-indigo-700 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 z-[1000] shadow-xl flex flex-col justify-start items-center rounded-tl-xl`}
         variants={sidebarVariants}
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
         exit="exit"
       >
-        {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
           className="text-2xl  text-white flex self-stretch justify-end px-4 py-3"
         >
           <IoCloseSharp className="text-white" />
         </button>
-
-        {/* Sidebar Links */}
-        <ul className="flex flex-col items-center gap-6 mt-12 text-lg font-semibold text-white self-stretch">
+        <ul className="flex flex-col items-center gap-5 mt-12 px-4 text-lg font-semibold text-white self-stretch">
           {navItems.map((item, index) => (
             <li
               className="hoveranimation  hover:scale-105 transition-all  flex justify-center items-center px-6 py-3 rounded-xl w-full"
@@ -100,6 +97,12 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               </Link>
             </li>
           ))}
+           <Link onClick={()=>setIsOpen(false)}
+            href="/auth/signin"
+            className="sign-in-btn flex text-xl font-semibold self-stretch justify-center border-white   py-[.65rem]  text-black border-[1px]  rounded-full"
+          >
+            Sign In
+          </Link>
         </ul>
       </motion.div>
     </>
