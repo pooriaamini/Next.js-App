@@ -16,18 +16,20 @@ export default function HomeSection() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="home   flex flex-col items-center gap-4 justify-center "
+      className="home   flex flex-col items-center gap-4 justify-center  "
     >
-      <p className="text-[1.8rem] text-black dark:text-white w-[90%]  lg:w-[60vw] self-center   px-4 lg:px-0  lg:text-[2.25rem]  text-center font-bold">
-        Next.js Template and Boilerplate for Crypto, ICO and Web3
-      </p>
-      <p className="text-center self-center w-[90%] lg:w-[60vw]  text-[#637381] dark:text-white px-0 lg:px-8 font-medium text-[1.125rem] ">
-        A Next.js website template for Crypto Currency, Blockchain, ICO, and
-        Web3, meticulously styled with Tailwind CSS. This boilerplate includes
-        essential integrations, UI components, pages, and enabling you to launch
-        a comprehensive website or landing page for anything related to Crypto,
-        Blockchain, and Web3.
-      </p>
+      <div className="title max-w-4xl ">
+        <p className="text-[1.6rem] text-black dark:text-white     lg:text-[2.25rem]  text-center font-bold">
+          Next.js Template and Boilerplate for Crypto, ICO and Web3
+        </p>
+        <p className="text-center    text-[#637381] dark:text-white  font-medium text-[1.105rem] px-2 ">
+          A Next.js website template for Crypto Currency, Blockchain, ICO, and
+          Web3, meticulously styled with Tailwind CSS. This boilerplate includes
+          essential integrations, UI components, pages, and enabling you to launch
+          a comprehensive website or landing page for anything related to Crypto,
+          Blockchain, and Web3.
+        </p>
+      </div>
       <div className=" mt-4 self-center   flex flex-wrap justify-center gap-4">
         <Tooltips />
       </div>
