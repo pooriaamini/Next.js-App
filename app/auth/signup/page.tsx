@@ -4,9 +4,6 @@ import SignupHeader from "@/app/components/SignupHeader";
 import { ActiveProvider } from "@/app/contexts/activeContext";
 
 export default function Page() {
-  
-  
-
   return (
     <ActiveProvider>
       <div className="min-h-screen flex  flex-col items-center  justify-center text-black dark:text-white ">
