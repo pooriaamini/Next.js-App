@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/icons/logo.svg";
+import logo from "../../public/icons/coinbase-coin-seeklogo.svg";
 import { useTheme } from "next-themes";
 import { ThemeSwitcher } from "@/app/components/ThemeSwitcher";
 import { FaBars } from "react-icons/fa";
@@ -64,9 +64,9 @@ export default function Header() {
               : "bg-transparent dark:bg-transparent"
           }`}
       >
-        <div className="flex flex-row-reverse gap-4 justify-center items-center">
-          <p className="text-4xl text-blue-600 font-middletracking-wider font-[cursive]	">vezzra</p>
-          <Image className="self-end"  width={40}  src={logo} alt="logo" />
+        <div className="flex flex-row-reverse justify-center items-center">
+          <p className="text-4xl text-blue-600 font-middletracking-wider font-bold">Crypto</p>
+          <Image className="self-end"  width={70}  src={logo} alt="logo" />
           
         </div>
         <ul className="hidden lg:flex gap-[3rem] text-[1.05rem] font-medium text-[#637381] dark:text-white">

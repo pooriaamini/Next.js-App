@@ -12,7 +12,6 @@ function SignupHeader() {
         <p>Sign up with Google</p>
         <Image src={googleSvg} alt="google" />
       </button>
-
       <div className="flex justify-center items-center gap-4 mt-4 text-center">
         <p className="w-20 border-solid border-b-2"></p>
         <p>Or, register with your email</p>

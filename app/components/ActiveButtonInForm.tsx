@@ -7,10 +7,7 @@ import SignupPassword from "./SignupPassword";
 
 function ActiveButton() {
   const pathname = usePathname();
-
   const isSignUp = pathname.includes("signup") == true;
-
-
   const { isActive } = useActive();
   return (
     <>

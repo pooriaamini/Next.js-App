@@ -72,7 +72,6 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           onClick={() => setIsOpen(false)}
         />
       )}
-
       <motion.div
         className={`fixed top-0 right-0 h-screen w-[60%] md:w-72 lg:w-80 bg-gradient-to-br from-blue-500 to-indigo-700 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 z-[1000] shadow-xl flex flex-col justify-start items-center rounded-tl-xl`}
         variants={sidebarVariants}

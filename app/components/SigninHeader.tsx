@@ -14,7 +14,6 @@ function SigninHeader() {
         <p className="hover:text-[#3e7dff]">Sign in with Google</p>
         <Image src={googleSvg} alt="google" />
       </button>
-
       <div className="flex justify-center items-center gap-4 mt-4 text-center">
         <p className="  w-20 border-solid border-b-2 "></p>
         <p>Or, sign in with your email</p>

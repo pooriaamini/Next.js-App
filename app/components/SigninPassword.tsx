@@ -13,7 +13,6 @@ function SigninPassword() {
           id=""
         />
       </div>
-
       <div className="password flex flex-col gap-1 items-stretch justify-center">
         <label className="ms-2 text-[.9rem]">Your Password</label>
         <input
@@ -24,7 +23,6 @@ function SigninPassword() {
           id=""
         />
       </div>
-
       <p className="forgot flex justify-between items-center mt-4 text-[.85rem]">
         <p className="flex flex-row-reverse justify-start items-center gap-3">
           <span className="text-[#637381]">Keep me signed in</span>
@@ -37,17 +35,14 @@ function SigninPassword() {
           Forgot Password?
         </Link>
       </p>
-
       <button className="bg-[#3e7dff] text-white font-middle hover:bg-[#3e7dffcc]  p-4 rounded-full  transition duration-500 mt-[1.5rem] ">
         Sign up
       </button>
-
       <p className="singup flex justify-center items-center mt-2 text-[.9rem] gap-1 lg:text-[1rem]">
         <span className="text-[#637381]">Do not you have an account?</span>
         <Link href='signup' className="text-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000">
         Sign up
         </Link>
-        
       </p>
     </form>
   );

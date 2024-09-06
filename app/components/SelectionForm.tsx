@@ -17,15 +17,13 @@ function SelectionForm() {
       >
         Magic Link
       </button>
-
       <button
         onClick={() => setIsActive(true)}
         className={` ${
           isActive
             ? "text-[#3e7dff] bg-[#3e7dff0d]"
             : "bg-transparent text-[#b5b3bc] dark:bg-[#2c303b]"
-        } rounded-lg  px-10 py-3     self-stretch lg:self-auto `}
-      >
+        } rounded-lg  px-10 py-3     self-stretch lg:self-auto `}>
         Password
       </button>
     </div>

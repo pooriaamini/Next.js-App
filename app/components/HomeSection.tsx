@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -9,19 +8,9 @@ import tailgrid from "../../public/icons/tailgrids.svg";
 import lineicons from "../../public/icons/lineicons.svg";
 import ayroui from "../../public/icons/ayroui.svg";
 import plainadmin from "../../public/icons/plainadmin.svg";
-import uideckwhite from "../../public/icons/uideck-white.svg";
-import tailgridwhite from "../../public/icons/TailGrids-white.svg";
-import lineiconwhite from "../../public/icons/LineIcons-white.svg";
-import ayrouiwhite from "../../public/icons/AyroUI-white.svg";
-import plainadminwhite from "../../public/icons/PlainAdmin-white.svg";
-import { useTheme } from "next-themes";
 
 
 export default function HomeSection() {
-
-  const { theme,setTheme } = useTheme()
-
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 10 }}
@@ -39,11 +28,9 @@ export default function HomeSection() {
         a comprehensive website or landing page for anything related to Crypto,
         Blockchain, and Web3.
       </p>
-
       <div className=" mt-4 self-center   flex flex-wrap justify-center gap-4">
         <Tooltips />
       </div>
-
       <button className="bg-[#3e7dff]   py-2 px-7 mt-4 rounded-full text-white font-middle self-center hover:opacity-90 hover:transition-opacity">
         <Link href="">Buy Tokens 47% Off</Link>
       </button>

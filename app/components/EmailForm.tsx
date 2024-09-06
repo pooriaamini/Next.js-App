@@ -1,11 +1,9 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import toast, { Toaster } from 'react-hot-toast';
 
-
 interface Inputs{
   email:string
 }
-
 
 function EmailForm() {
 
@@ -19,7 +17,6 @@ function EmailForm() {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     toast.success('Link sent successfully')
   }
-
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}
