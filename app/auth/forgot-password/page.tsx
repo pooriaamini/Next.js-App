@@ -7,7 +7,7 @@ export default function Page() {
       <form className="flex flex-col w-auto lg:max-w-[50%]  gap-2 items-center lg:my-auto mt-8 self-start   justify-center">
       <h2 className="text-black dark:text-white font-bold text-2xl">Forgot Password</h2>
         <p className="text-center">
-          Enter the email address associated with your account and we'll send
+          Enter the email address associated with your account and we will send
           you a link to reset your password.
         </p>
         <input
