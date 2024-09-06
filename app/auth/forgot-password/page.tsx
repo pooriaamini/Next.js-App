@@ -17,7 +17,6 @@ export default function Page() {
           id=""
           autoComplete="off"
         />
-
         <button type="button" className="bg-[#3e7dff] self-stretch   text-white font-middle hover:bg-[#3e7dffcc]  p-4 rounded-full  transition duration-500 ">
           Send Reset Link
         </button>

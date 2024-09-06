@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -65,8 +64,8 @@ export default function Header() {
           }`}
       >
         <div className="flex flex-row-reverse justify-center items-center">
-          <p className="text-4xl text-blue-600 font-middletracking-wider font-bold">Crypto</p>
-          <Image className="self-end"  width={70}  src={logo} alt="logo" />
+          <p className="text-3xl lg:text-4xl text-blue-600  font-semibold lg:font-bold">Crypto</p>
+          <Image className="self-end"  width={60} height={50}  src={logo} alt="logo" />
           
         </div>
         <ul className="hidden lg:flex gap-[3rem] text-[1.05rem] font-medium text-[#637381] dark:text-white">
@@ -84,8 +83,9 @@ export default function Header() {
           >
             Sign In
           </Link>
+
           <button onClick={() => setIsOpen(true)} className="text-black dark:text-white md:hidden">
-            <FaBars className="text-lg" />
+            <FaBars className="text-[1.5rem] rounded-sm" />
           </button>
         </div>
       </header>
