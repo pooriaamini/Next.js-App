@@ -31,7 +31,7 @@ function SigninPassword() {
             type="checkbox"
           />
         </p>
-        <Link href='forget-password' className="text-[#3e7dff] decoration-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000   ">
+        <Link href='forgot-password' className="text-[#3e7dff] decoration-[#3e7dff] hover:underline underline-offset-4  transition-all duration-1000   ">
           Forgot Password?
         </Link>
       </p>
