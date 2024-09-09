@@ -18,11 +18,11 @@ export default function HomeSection() {
       transition={{ duration: 0.3 }}
       className="home   flex flex-col items-center gap-4 justify-center  "
     >
-      <div className="title max-w-4xl ">
+      <div className="title max-w-4xl px-5 lg:px-0 ">
         <p className="text-[1.6rem] text-black dark:text-white     lg:text-[2.25rem]  text-center font-bold">
           Next.js Template and Boilerplate for Crypto, ICO and Web3
         </p>
-        <p className="text-center    text-[#637381] dark:text-white  font-medium text-[1.105rem] px-2 ">
+        <p className="text-center  mt-3  text-[#637381] dark:text-white  font-medium text-[1.105rem] px-2 ">
           A Next.js website template for Crypto Currency, Blockchain, ICO, and
           Web3, meticulously styled with Tailwind CSS. This boilerplate includes
           essential integrations, UI components, pages, and enabling you to launch
