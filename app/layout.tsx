@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth overflow-x-hidden" suppressHydrationWarning lang="en ">
       <body
-        className={`${inter.className} background   dark:bg-dark-mode relative`}>
+        className={`${inter.className} background dark:bg-dark-mode relative`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -38,3 +38,4 @@ export default function RootLayout({
     </html>
   );
 }
+

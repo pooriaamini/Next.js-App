@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 import image1 from "../../public/images/2149101154.jpg";
 import image2 from "../../public/images/5162.jpg";
@@ -41,10 +44,17 @@ function TeamSection() {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-8   items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.1, once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="flex flex-wrap gap-8   items-center justify-center"
+      >
         {cardItem.map((item, index) => {
           return (
             <div
+         
               key={index}
               className="flex flex-col items-center justify-center gap-4 h-auto bg-sky-100 dark:bg-[#131b4dcc] p-6 rounded-2xl transition duration-400 ease-in-out border-b-4 border-transparent	 hover:border-b-4 hover:border-[#0070f3] "
             >
@@ -64,7 +74,7 @@ function TeamSection() {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }
